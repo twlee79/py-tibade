@@ -1,0 +1,42 @@
+{% set name = "py-tibade" %}
+{% set version = "1.0.0dev1" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "7db8972d873ba767b00520ae3a9feb8dbd958d784551695bd28f3c5a4c36c91e" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  entry_points:
+    - py-tibade = py-tibade.py-tibade:main
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+    - pycryptodome >=v3.8.2
+  run:
+    - python
+    - pycryptodome >=v3.8.2
+
+about:
+  home: https://github.com/twlee79/py-tibade
+  license: MIT License
+  license_family: MIT
+  license_file: 'LICENSE'
+  summary: Decrypt Titanium Backup for Android backups with Python/pycryptodome
+  description: >
+    This is a Python/pycryptodome-based implementation of a script to decrypt 
+    backups made by Titanium Backup for Android.
+
+extra:
+  recipe-maintainers: twlee79
