@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="py-tibade",
+    name="pytibade",
     version="1.0.0dev1",
     author="Tet Woo Lee",
     author_email="developer@twlee.nz",
@@ -26,7 +26,7 @@ setuptools.setup(
     ],
     entry_points={
         'console_scripts': [
-            'py-tibade = py-tibade.py-tibade:main',
+            'pytibade = pytibade.pytibade:main',
         ],
     },
     data_files=[("", ["LICENSE"]),

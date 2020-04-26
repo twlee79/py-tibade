@@ -1,4 +1,4 @@
-{% set name = "py-tibade" %}
+{% set name = "pytibade" %}
 {% set version = "1.0.0dev1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
@@ -16,7 +16,7 @@ source:
 build:
   number: 0
   entry_points:
-    - py-tibade = py-tibade.py-tibade:main
+    - pytibade = pytibade.pytibade:main
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
