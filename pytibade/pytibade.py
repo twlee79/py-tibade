@@ -29,9 +29,16 @@ _PROGRAM_VERSION = '1.0.0dev1'
 # -------------------------------------------------------------------------------
 # ### Change log
 #
-# + version 1.0.dev1 2020-04-26
+# + version 1.0.0.dev1 2020-04-26
 #   Working version
 # -------------------------------------------------------------------------------
+
+# TODO: Allow encrypting, either with key from an existing backup file, or
+# by generating a new key
+# key = RSA.generate(4096)
+# key.export_key('DER')
+# key.publickey.export_key('DER')
+# base64.b64encode(key.export_key('DER'))
 
 import argparse
 import base64

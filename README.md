@@ -154,6 +154,6 @@ Dependencies  | pycryptodome, tested with v3.8.2
 
 ### Change log
 
-+ version 1.0.dev1 2020-04-26  
++ version 1.0.0.dev1 2020-04-26  
   Working version
 
