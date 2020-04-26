@@ -1,5 +1,5 @@
 {% set name = "pytibade" %}
-{% set version = "1.0.0dev1" %}
+{% set version = "1.0.0.dev1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash_value = "f548a0561889628401f88a05ef98fa151a2449688541717ce3ee53732c4d16cb" %}
