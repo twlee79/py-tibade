@@ -45,8 +45,8 @@ import re
 import sys
 from hashlib import sha1
 
-import Crypto
-from Crypto.public_key import RSA
+import Crypto.Util.Padding
+from Crypto.PublicKey import RSA
 from Crypto.Cipher import AES, PKCS1_v1_5
 
 
@@ -146,7 +146,7 @@ def tibade_decrypt(input_path, passphrase, output_path, verbose = 0):
         keypair_rsa = RSA.import_key(private_key)
 
         # sanity check: calculated public key should match that stored in header
-        if hmac.compare_digest(keypair_rsa.public_key().exportKey(format='DER'),
+        if hmac.compare_digest(keypair_rsa.publickey().exportKey(format='DER'),
             public_key):
             if verbose>=3: print("   public_key matches")
         else:

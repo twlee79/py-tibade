@@ -16,13 +16,16 @@ created by David O'Rourke.
 ## Installation
 
 This is available on both PyPi:
-`pip install py-tibade`
+```
+pip install pytibade
+pytibade --version
+```
 
 and conda:
 ```
-conda create -n tibade -c twlee79 py-tibade
-cona activate tibade
-py-tibade --version
+conda create -n pytibade -c twlee79 pytibade
+cona activate pytibade
+pytibade --version
 ```
 
 ## Usage
@@ -56,7 +59,7 @@ optional arguments:
                         with `-v` to `-vvv` (default: 0)
 ```
 
-Simplest usage: `py-tibade com.my.favourite.app-20200426-111127.tar.gz`
+Simplest usage: `pytibade com.my.favourite.app-20200426-111127.tar.gz`
 
 The script will then prompt for the passphrase. 
 
