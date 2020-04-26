@@ -2,7 +2,7 @@
 {% set version = "1.0.0dev1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "4cc2578830bbe0bb07d8eb7eefd51a22181a2dec2d84aea3774abe7263603ac7" %}
+{% set hash_value = "f548a0561889628401f88a05ef98fa151a2449688541717ce3ee53732c4d16cb" %}
 
 package:
   name: '{{ name|lower }}'
@@ -11,6 +11,9 @@ package:
 source:
   fn: '{{ name }}-{{ version }}.{{ file_ext }}'
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  # to build with local tarball built by setuptools in dist directory, use following url
+  # use sha256sum to get hash
+  #url: ../../dist/{{ name }}-{{ version }}.{{ file_ext }}
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
